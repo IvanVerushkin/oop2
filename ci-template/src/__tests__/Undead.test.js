@@ -1,7 +1,7 @@
 import Undead from '../js/personages/Undead'
 
 test('should check the class Undead', () => {
-    const character = new Undead('Igor', 'Undead');
+    const person = new Undead('Tut');
     const result = {
         name: 'Tut',
         type: 'Undead',
@@ -10,5 +10,5 @@ test('should check the class Undead', () => {
         attack: 25,
         defence: 25,
     }
-    expect(character).toMatchObject(result);
+    expect(person).toEqual(result);
 });

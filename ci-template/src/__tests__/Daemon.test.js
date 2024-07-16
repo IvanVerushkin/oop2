@@ -1,7 +1,7 @@
 import Daemon from '../js/personages/Daemon'
 
 test('should check the class Daemon', () => {
-    const character = new Daemon('Igor', 'Daemon');
+    const person = new Daemon('Victor');
     const result = {
         name: 'Victor',
         type: 'Daemon',
@@ -10,5 +10,5 @@ test('should check the class Daemon', () => {
         attack: 10,
         defence: 40,
     }
-    expect(character).toMatchObject(result);
+    expect(person).toEqual(result);
 });

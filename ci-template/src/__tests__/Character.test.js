@@ -32,10 +32,21 @@ test('should check the class Character no name', () => {
     expect(character).toMatchObject(result);
 });
 
+test('test level up',() => {
+    const Bowerman = new Bowerman('Player', 'Magician');
+    Bowerman.levelUp();
+    const result = {
+        attack: 30, defence: 30, health: 100, level: 2, name: 'bowman', type: 'Bowerman'
+    };
+    expect(Bowerman).toEqual(result);
+});
+
 test('should levelUp the defence', () => {
-    const character = new Character('Player', 'Magician');
-    character.health = 0;
-    expect(() => character.levelUp()).toThrow(new Error('Нельзя повысить уровень, умер'));
+    expect(() => {
+        const Magician = new Magician('Player', 'Magician');
+        Magician.health = 0;
+        Magician.levelUp();
+    }).toThrow(new Error('Нельзя повысить уровень, умер'));
 });
 
 test('should levelUp the defence', () => {

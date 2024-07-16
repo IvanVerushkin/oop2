@@ -1,7 +1,7 @@
 import Bowerman from '../js/personages/Bowerman'
 
 test('should check the class Bowerman', () => {
-    const character = new Bowerman('Igor', 'Bowerman');
+    const person = new Bowerman('Igor');
     const result = {
         name: 'Igor',
         type: 'Bowerman',
@@ -10,5 +10,5 @@ test('should check the class Bowerman', () => {
         attack: 25,
         defence: 25,
     }
-    expect(character).toMatchObject(result);
+    expect(person).toEqual(result);
 });

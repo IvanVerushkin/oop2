@@ -15,10 +15,6 @@ export default class Character {
             'Zombie'
         ];
 
-        if (!types.includes(type)) {
-            throw new Error ('Ошибка в параметре type')
-        }
-
         this.name = name
         this.type = type;
         this.health = 100;
@@ -37,7 +33,6 @@ export default class Character {
         else {
             throw new Error('Нельзя повысить уровень, умер');
         }
-        return this;
     }
     damage(points) {
         if (this.health > 0) {

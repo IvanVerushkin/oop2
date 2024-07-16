@@ -1,7 +1,7 @@
 import Magician from '../js/personages/Magician'
 
 test('should check the class Magician', () => {
-    const character = new Magician('Igor', 'Magician');
+    const person = new Magician('Jim');
     const result = {
         name: 'Jim',
         type: 'Magician',
@@ -10,5 +10,5 @@ test('should check the class Magician', () => {
         attack: 10,
         defence: 40,
     }
-    expect(character).toMatchObject(result);
+    expect(person).toEqual(result);
 });
