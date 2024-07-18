@@ -6,14 +6,6 @@ export default class Character {
         if (name.length < 2 || name.length > 10) {
             throw Error ('Ошибка')
         }
-        const types = [
-            'Bowerman',
-            'Swordsman',
-            'Magician',
-            'Daemon',
-            'Undead',
-            'Zombie'
-        ];
 
         this.name = name
         this.type = type;
